@@ -25,6 +25,9 @@
           {% include './icons/file-earmark-plus.svg' %}
         </a>
         <a href="{% url 'post_draft_list' %}" class="top-menu">Drafts</span></a>
+        <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+        {% else %}
+        <a href="{% url 'login' %}" class="top-menu"><small>Login</small></a>
         {% endif %}
         <h1><a href="/">Django Girls Blog</a></h1>
       </div>
